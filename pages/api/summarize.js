@@ -1,5 +1,6 @@
 export default async function handler(req, res) {
   const { text } = req.body;
+  Authorization: `Bearer ${process.env.HF_API_KEY}`
 
   const response = await fetch(
     "https://api-inference.huggingface.co/models/facebook/bart-large-cnn",
